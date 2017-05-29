@@ -19,6 +19,9 @@ public class MainUI {
     private JFrame jframe;
     private JPanel clientList;
     private JPanel productList;
+    
+    
+    
     JTable table;
     DefaultTableModel dtm;
 

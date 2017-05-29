@@ -21,11 +21,20 @@ public class RaportClient {
     RaportClient(ArrayList<Factura> l, String nameClient){
         this.listaFacturi = l;
         this.clientName = nameClient;
+        
+        
         startWindow();
+        
+        
+        
     }
 
     private void startWindow() {
         jframe = new JFrame("Client Nou");
+        
+        
+        
+        
         jframe.setPreferredSize(new Dimension(400, 300));
         jframe.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 

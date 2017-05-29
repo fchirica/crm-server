@@ -35,8 +35,9 @@ public class ConnectionController {
             objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
             objectOutputStream.flush();
             
-            
             objectOutputStream.writeObject("Works");
+            
+            
             objectInputStream = new ObjectInputStream(socket.getInputStream());
 
             objectOutputStream.writeObject("Works");
