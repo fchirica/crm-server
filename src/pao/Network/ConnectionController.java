@@ -14,9 +14,14 @@ import java.util.ArrayList;
 public class ConnectionController {
 
     Socket socket;
+    
+    
     ObjectInputStream objectInputStream;
     ObjectOutputStream objectOutputStream;
     private static ConnectionController instance;
+    
+    
+    
 
     public static ConnectionController getInstance(){
         if(instance == null)
@@ -29,10 +34,10 @@ public class ConnectionController {
             socket = new Socket("localhost", 9998);
             objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
             objectOutputStream.flush();
-            objectOutputStream.writeObject("Hello");
+            objectOutputStream.writeObject("Works");
             objectInputStream = new ObjectInputStream(socket.getInputStream());
 
-            objectOutputStream.writeObject("Merge");
+            objectOutputStream.writeObject("Works");
             System.out.print(objectInputStream.readObject());
 
         } catch (IOException e) {
@@ -40,6 +45,8 @@ public class ConnectionController {
         }
         catch(ClassNotFoundException e){
             e.printStackTrace();
+            
+            
         }
     }
 
